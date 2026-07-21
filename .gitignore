@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -7,6 +8,13 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+=======
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+>>>>>>> 77acdd3 (Initial commit - ChatBot Tester Framework)
 .Python
 build/
 develop-eggs/
@@ -20,6 +28,7 @@ parts/
 sdist/
 var/
 wheels/
+<<<<<<< HEAD
 share/python-wheels/
 *.egg-info/
 .installed.cfg
@@ -216,3 +225,50 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+=======
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+cover/
+
+# Reports
+reports/*.html
+reports/*.json
+!reports/.gitkeep
+
+# Configuration (secrets)
+.env
+.env.local
+.env.*.local
+config.local.yaml
+*.local.yaml
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Locale/build artifacts
+locales/*.json
+!locales/en-US.json
+>>>>>>> 77acdd3 (Initial commit - ChatBot Tester Framework)

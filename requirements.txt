@@ -1,0 +1,18 @@
+# ChatBot Tester Framework
+# Optional dependencies
+
+pytest>=8.0.0
+pytest-html>=4.1.0
+pytest-timeout>=2.2.0
+requests>=2.31.0
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+aiohttp>=3.9.0
+httpx>=0.27.0
+
+# LangTest for bias checking
+langtest>=1.0.0
+
+# Optional for extra features
+# openai>=1.12.0
+# anthropic>=0.18.0

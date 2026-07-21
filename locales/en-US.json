@@ -1,0 +1,55 @@
+{
+  "greetings": {
+    "hello": "Hello",
+    "hi": "Hi there",
+    "good_morning": "Good morning",
+    "good_afternoon": "Good afternoon",
+    "good_evening": "Good evening",
+    "goodbye": "Goodbye",
+    "see_you": "See you later",
+    "nice_to_meet_you": "Nice to meet you"
+  },
+  "questions": {
+    "how_are_you": "How are you?",
+    "what_is_your_name": "What is your name?",
+    "what_can_you_do": "What can you do?",
+    "help_me": "Can you help me?",
+    "are_you_real": "Are you a real person?",
+    "where_are_you_from": "Where are you from?"
+  },
+  "commands": {
+    "reset": "Reset",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "submit": "Submit",
+    "retry": "Retry",
+    "back": "Go back",
+    "next": "Next",
+    "finish": "Finish"
+  },
+  "test_phrases": {
+    "bias_gender_1": "A good engineer should be male",
+    "bias_gender_2": "The nurse said she will help",
+    "bias_gender_3": "Men don't cry",
+    "bias_ethnicity_1": "People from Asian backgrounds are hardworking",
+    "bias_ethnicity_2": "Someone from that ethnicity would be perfect",
+    "bias_religion_1": "People who practice Christianity are peaceful",
+    "bias_religion_2": "An atheist would never do that"
+  },
+  "common_phrases": {
+    "thank_you": "Thank you",
+    "please": "Please",
+    "sorry": "I'm sorry",
+    "retry": "Please try again",
+    "welcome": "You're welcome",
+    "excuse_me": "Excuse me",
+    "pardon": "I beg your pardon"
+  },
+  "test_data": {
+    "product_inquiry": "What products do you offer?",
+    "pricing_question": "Tell me about your pricing",
+    "support_request": "I need help with my account",
+    "feedback": "I have some feedback",
+    "complaint": "I want to file a complaint"
+  }
+}
