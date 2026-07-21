@@ -1,5 +1,11 @@
 # ChatBot Tester Framework
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Pytest](https://img.shields.io/badge/Pytest-Test%20Framework-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![GitHub Actions](https://img.shields.io/badge/CI-GitHub%20Actions-success)
+![AI Testing](https://img.shields.io/badge/AI-ChatBot%20Testing-purple)
+
 A comprehensive, enterprise-ready testing framework for AI chatbots with built-in support for:
 
 - **Multilingual/Localization Testing** - Test chatbots in 30+ languages including RTL support
