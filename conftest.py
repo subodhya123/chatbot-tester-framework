@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Dict, Any, Optional
 from clients import ChatBotClient, ChatBotClientBuilder, ConversationContext
 from auth import AuthFactory, NoAuth
-from locales import LocalizationManager, get_localization_manager
+from locales import LocalizationManager, get_localization_manager, LocalizedConversationContext
 from exceptions import (
     ChatBotTesterException,
     FlakyTestError,

@@ -238,7 +238,7 @@ class TestThroughput:
 
         start_time = time.time()
 
-        for prompt in prompts:
+        for i, prompt in enumerate(prompts):
             response = chatbot_client.send_message(prompt)
             assert response.success, f"Batch request {i} failed"
 

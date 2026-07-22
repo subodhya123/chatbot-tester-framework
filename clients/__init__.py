@@ -7,7 +7,7 @@ from typing import Dict, List, Optional, Any, Union
 from dataclasses import dataclass, field
 from datetime import datetime
 import requests
-from auth import AuthFactory, AuthStrategy
+from auth import AuthFactory, AuthStrategy, NoAuth
 
 
 @dataclass
