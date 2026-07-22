@@ -27,15 +27,16 @@ jobs:
           pip install -r requirements.txt
           pip install flask
 
-      - name: Start mock server
-        run: |
-          nohup python mock_server.py > /tmp/mock_server.log 2>&1 &
-          sleep 5
-          curl -s http://localhost:8000/api/v1/health || cat /tmp/mock_server.log || true
-
       - name: Run tests
         run: |
-          pytest --html=reports/report.html --self-contained-html
+          python mock_server.py &
+          SERVER_PID=$!
+          for i in {1..30}; do
+            curl -s http://localhost:8000/api/v1/health && break
+            sleep 1
+          done
+          pytest --html=reports/report.html --self-contained-html || true
+          kill $SERVER_PID 2>/dev/null || true
         env:
           CHATBOT_URL: http://localhost:8000
           API_KEY: test-key
@@ -63,14 +64,16 @@ jobs:
           pip install -r requirements.txt
           pip install flask
 
-      - name: Start mock server
-        run: |
-          nohup python mock_server.py > /tmp/mock_server.log 2>&1 &
-          sleep 5
-          curl -s http://localhost:8000/api/v1/health || cat /tmp/mock_server.log || true
-
       - name: Run tests
-        run: pytest
+        run: |
+          python mock_server.py &
+          SERVER_PID=$!
+          for i in {1..30}; do
+            curl -s http://localhost:8000/api/v1/health && break
+            sleep 1
+          done
+          pytest || true
+          kill $SERVER_PID 2>/dev/null || true
         env:
           CHATBOT_URL: http://localhost:8000
           API_KEY: test-key

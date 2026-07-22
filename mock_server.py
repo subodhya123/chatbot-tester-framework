@@ -290,4 +290,4 @@ if __name__ == "__main__":
     print("Supported locales: en-US, es-ES, fr-FR, de-DE, zh-CN, ar-SA")
     print("=" * 60)
 
-    app.run(host="0.0.0.0", port=8000, debug=False)
+    app.run(host="0.0.0.0", port=8000, debug=False, threaded=True)
