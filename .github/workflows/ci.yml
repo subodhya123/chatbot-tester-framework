@@ -29,8 +29,9 @@ jobs:
 
       - name: Start mock server
         run: |
-          python mock_server.py &
-          sleep 3
+          nohup python mock_server.py > /tmp/mock_server.log 2>&1 &
+          sleep 5
+          curl -s http://localhost:8000/api/v1/health || cat /tmp/mock_server.log || true
 
       - name: Run tests
         run: |
@@ -64,8 +65,9 @@ jobs:
 
       - name: Start mock server
         run: |
-          python mock_server.py &
-          sleep 3
+          nohup python mock_server.py > /tmp/mock_server.log 2>&1 &
+          sleep 5
+          curl -s http://localhost:8000/api/v1/health || cat /tmp/mock_server.log || true
 
       - name: Run tests
         run: pytest

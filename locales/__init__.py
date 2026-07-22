@@ -491,6 +491,10 @@ class LocalizedConversationContext:
             for msg in self.messages
         ]
 
+    def to_dict(self) -> List[Dict[str, str]]:
+        """Convert conversation to list of message dicts."""
+        return self.get_messages_for_api()
+
     def clear(self):
         """Clear conversation history."""
         self.messages.clear()
