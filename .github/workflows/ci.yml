@@ -25,13 +25,19 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install flask
+
+      - name: Start mock server
+        run: |
+          python mock_server.py &
+          sleep 3
 
       - name: Run tests
         run: |
           pytest --html=reports/report.html --self-contained-html
         env:
-          CHATBOT_URL: ${{ secrets.CHATBOT_URL }}
-          API_KEY: ${{ secrets.API_KEY }}
+          CHATBOT_URL: http://localhost:8000
+          API_KEY: test-key
 
       - name: Upload test report
         if: always()
@@ -54,9 +60,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install flask
+
+      - name: Start mock server
+        run: |
+          python mock_server.py &
+          sleep 3
 
       - name: Run tests
         run: pytest
         env:
-          CHATBOT_URL: ${{ secrets.CHATBOT_URL }}
-          API_KEY: ${{ secrets.API_KEY }}
+          CHATBOT_URL: http://localhost:8000
+          API_KEY: test-key
